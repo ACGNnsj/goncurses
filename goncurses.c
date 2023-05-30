@@ -67,8 +67,8 @@ bool ncurses_is_pad(const WINDOW *win) {
 bool ncurses_is_subwin(const WINDOW *win) {
 #ifdef PDCURSES
 	return win->_parent != NULL;
-#elseif NCURSES_VERSION_MAJOR > 5
-	return is_subwin(win);
+/*#elseif NCURSES_VERSION_MAJOR > 5
+	return is_subwin(win);*/
 #else
 	return false; /* FIXME */
 #endif
